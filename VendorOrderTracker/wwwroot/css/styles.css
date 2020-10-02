@@ -7,3 +7,14 @@ div#footer {
   background:#333;
   padding:8px;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  color: black;
+  background: skyblue;
+  padding-bottom: 500px;
+}

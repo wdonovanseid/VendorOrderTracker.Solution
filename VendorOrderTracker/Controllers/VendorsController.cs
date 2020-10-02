@@ -55,6 +55,7 @@ namespace VendorOrderTracker.Controllers
     public ActionResult Destroy()
     {
       Vendor.ClearAllVendors();
+      Order.ClearAllOrders();
       return RedirectToAction("Index");
     }
 

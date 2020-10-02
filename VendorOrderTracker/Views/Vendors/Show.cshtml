@@ -9,8 +9,7 @@
     <h1>@Model["vendor"].Name</h1>
   </div>
   <div class="card-body">
-    <p>@Model["vendor"].Description</p>
-
+    <p>Description: @Model["vendor"].Description</p>
     <p>Address: @Model["vendor"].Address</p>
   </div>
   <div class="card">
@@ -30,6 +29,7 @@
             <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.Title</a></li>
           }
         }
+        
         <p class="btn btn-success"><a href="/vendors/@Model["vendor"].Id/orders/new">Add new Order</a></p>
         <form action="/vendors/@Model["vendor"].Id/orders/delete" method="post">
           <input id="vendorId" name="vendorId" type="hidden" value="@Model["vendor"].Id">

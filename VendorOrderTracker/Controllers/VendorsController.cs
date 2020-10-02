@@ -67,11 +67,21 @@ namespace VendorOrderTracker.Controllers
       return RedirectToAction("Show");
     }
 
-    [HttpPost("/vendors/{vendorId}/delete")]
-    public ActionResult Destroy2(int vendorId)
+    [HttpGet("/vendors/{vendorId}/edit")]
+    public ActionResult Edit(int vendorId)
     {
-      Vendor.DeleteVendor(vendorId);
-      return RedirectToAction("Index");
+      Vendor selectedVendor = Vendor.FindVendor(vendorId);
+      return View(selectedVendor);
+    }
+
+    [HttpPost("/vendors/{vendorId}")]
+    public ActionResult Patch(int vendorId, string inputName, string inputDescription, string inputAddress)
+    {
+      Vendor selectedVendor = Vendor.FindVendor(vendorId);
+      selectedVendor.Name = inputName;
+      selectedVendor.Description = inputDescription;
+      selectedVendor.Address = inputAddress;
+      return RedirectToAction("Show");
     }
   }
 }

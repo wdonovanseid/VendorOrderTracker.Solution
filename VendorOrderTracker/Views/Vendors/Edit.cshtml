@@ -1,0 +1,22 @@
+@using VendorOrderTracker.Models;
+
+@{
+  Layout = "_Layout";
+}
+
+<div class="card">
+  <div class="card-title">
+    <h1>Edit @Model.Name Vendor</h1>
+  </div>
+  <div class="card-body">
+    <form action="/vendors/@Model.Id" method="post">
+      <label for="inputName">Name:</label>
+      <input id="inputName" name="inputName" type="text" value="@Model.Name"><br>
+      <label for="inputDescription">Description:</label>
+      <input id="inputDescription" name="inputDescription" type="text" value="@Model.Description"><br>
+      <label for="inputAddress">Address:</label>
+      <input id="inputAddress" name="inputAddress" type="text" value="@Model.Address"><br>
+      <button type="submit">Edit Vendor</button>
+    </form>
+  </div>
+</div>

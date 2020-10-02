@@ -2,6 +2,13 @@
   Layout = "_Layout";
 }
 
-<h1>Welcome Pierre!</h1>
+<h1>All Vendors</h1>
+<ul>
+  @foreach (Vendor vendor in Model)
+  {
+    <li><a href="/vendors/@vendor.Id">@vendor.Name</a></li>
+  }
+</ul>
 
-<p><a href="/vendors">Vendors Page</a></p>
+<p><a href="/vendors/new">Add New Vendor</a></li>
+<p><a href="/">Go to Homepage</a></p>

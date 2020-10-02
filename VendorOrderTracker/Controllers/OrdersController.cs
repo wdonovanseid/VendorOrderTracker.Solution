@@ -40,12 +40,13 @@ namespace VendorOrderTracker.Controllers
     public ActionResult Patch(int vendorId, int orderId, string inputTitle, string inputDescription, string inputPrice, string inputDate)
     {
       Vendor selectedVendor = Vendor.FindVendor(vendorId);
-      Order selectedOrder = selectedVendor.FindOrderInVendor(orderId);
+      Order selectedOrder = Order.FindOrder(orderId);
       selectedOrder.Title = inputTitle;
       selectedOrder.Description = inputDescription;
       selectedOrder.Price = inputPrice;
       selectedOrder.Date = inputDate;
       return RedirectToAction("Show");
     }
+
   }
 }

@@ -38,7 +38,6 @@ namespace VendorOrderTracker.Controllers
       return View(model);
     }
 
-    
     [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string inputTitle, string inputDescription, string inputPrice, string inputDate)
     {
@@ -83,5 +82,6 @@ namespace VendorOrderTracker.Controllers
       selectedVendor.Address = inputAddress;
       return RedirectToAction("Show");
     }
+
   }
 }

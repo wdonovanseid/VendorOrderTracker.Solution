@@ -43,9 +43,5 @@ namespace VendorOrderTracker.Models
       Orders.Add(order);
     }
 
-    public Order FindOrderInVendor(int searchId)
-    {
-      return Orders[searchId-1];
-    }
   }
 }

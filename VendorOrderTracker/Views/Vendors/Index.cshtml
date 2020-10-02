@@ -17,13 +17,13 @@
     {
       @foreach (Vendor vendor in Model)
       {
-        <li><a href="/vendors/@vendor.Id">@vendor.Name</a></li>
+        <li class="links"><a href="/vendors/@vendor.Id">@vendor.Name</a></li>
       }
     }
   </ul>
 
-  <p><a href="/vendors/new">Add New Vendor</a></p>
+  <p class="btn btn-info"><a href="/vendors/new">Add New Vendor</a></p>
   <form action="/vendors/delete" method="post">
-    <button type="submit">Delete all Vendors</button>
+    <button class="btn btn-danger" type="submit">Delete all Vendors</button>
   </form>
 </div>

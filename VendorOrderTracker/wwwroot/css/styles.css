@@ -1,12 +1,3 @@
-div#footer {
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  width:100%;
-  color:#CCC;
-  background:#333;
-  padding:8px;
-}
 
 img {
   width: 100%;
@@ -14,7 +5,30 @@ img {
 }
 
 body {
-  color: black;
-  background: skyblue;
+  color: purple;
+  background: gold;
+  font-family: Times;
+  font-weight: bolder;
   padding-bottom: 500px;
+}
+
+a {
+  color: white;
+}
+
+.card {
+  border: solid black;
+  background-color: grey;
+  padding: 24px;
+  font-size: 24px;
+}
+
+div#footer.card {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
 }

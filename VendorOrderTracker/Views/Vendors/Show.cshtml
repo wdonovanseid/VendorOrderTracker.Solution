@@ -30,14 +30,14 @@
             <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.Title</a></li>
           }
         }
-        <p><a href="/vendors/@Model["vendor"].Id/orders/new">Add new Order</a></p>
+        <p class="btn btn-success"><a href="/vendors/@Model["vendor"].Id/orders/new">Add new Order</a></p>
         <form action="/vendors/@Model["vendor"].Id/orders/delete" method="post">
           <input id="vendorId" name="vendorId" type="hidden" value="@Model["vendor"].Id">
-          <button type="submit">Delete all @Model["vendor"].Name Orders</button>
+          <button class="btn btn-danger" type="submit">Delete all @Model["vendor"].Name Orders</button>
         </form>
         <form action="/vendors/@Model["vendor"].Id/edit" method="get">
           <input id="vendorId" name="vendorId" type="hidden" value="@Model["vendor"].Id">
-          <button type="submit">Edit Vendor</button>
+          <button class="btn btn-info" type="submit">Edit Vendor</button>
         </form>
       </ul>
     </div>

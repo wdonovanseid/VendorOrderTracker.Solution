@@ -13,7 +13,7 @@
     <p>Price: $ @Model["order"].Price</p>
     <p>Date Ordered: @Model["order"].Date</p>
   </div>
-  <p><a href="/vendors/@Model["vendor"].Id/orders/@Model["order"].Id/edit">Edit Order</a></p>
+  <p class="btn btn-info"><a href="/vendors/@Model["vendor"].Id/orders/@Model["order"].Id/edit">Edit Order</a></p>
+  <p class="btn btn-info"><a href="/vendors/@Model["vendor"].Id">Back to Vendor</a></p>
 </div>
 
-<p><a href="/vendors/@Model["vendor"].Id">Back to Vendor</a></p>

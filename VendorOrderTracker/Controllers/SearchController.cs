@@ -26,7 +26,7 @@ namespace VendorOrderTracker.Controllers
       List<Vendor> allVendors = Vendor.GetAllVendors();
       foreach (Vendor vendor in allVendors)
       {
-        if (vendor.Name.ToUpper() == inputVendorName.ToUpper() || vendor.Name.Contains(inputVendorName))
+        if (vendor.Name.ToUpper().Contains(inputVendorName.ToUpper()))
         {
           matchingVendors.Add(vendor);
         }

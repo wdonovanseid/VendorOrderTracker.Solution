@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+<div class="card">
+  <div class="card-title">
+    <h1>Edit @Model["vendor"].Name Order @Model["order"].Title</h1>
+  </div>
+  <div class="card-body">
+    <form action="/vendors/@Model["vendor"].Id/orders/@Model["order"].Id" method="post">
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model["vendor"].Id">
+      <input id="orderId" name="orderId" type="hidden" value="@Model["order"].Id">
+      <label for="inputTitle">Title: </label>
+      <input id="inputTitle" name="inputTitle" type="text" value="@Model["order"].Title"><br>
+      <label for="inputDescription">Description: </label>
+      <input id="inputDescription" name="inputDescription" type="text" value="@Model["order"].Description"><br>
+      <label for="inputPrice">Price USD: </label>
+      <input id="inputPrice" name="inputPrice" type="number" value="@Model["order"].Price"><br>
+      <label for="inputDate">Date: </label>
+      <input id="inputDate" name="inputDate" type="date" value="@Model["order"].Date"><br>
+      <button type="submit">Edit Order</button>
+    </form>
+  </div>
+</div>

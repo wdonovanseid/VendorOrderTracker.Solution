@@ -1,13 +1,18 @@
 @{
   Layout = "_Layout";
 }
-
-<h1>@Model["vendor"].Name</h1>
-<h3>@Model["order"].Title</h3>
-
-<p>@Model["order"].Description</p>
-
-<p>Price: $ @Model["order"].Price</p>
-<p>Date Ordered: @Model["order"].Date</p>
+<div class="card">
+  <div class="card-title">
+    <h1>@Model["vendor"].Name</h1>
+  </div>
+  <div class="card-subtitle">
+    <h3>@Model["order"].Title</h3>
+  </div>
+  <div class="card-body">
+    <p>@Model["order"].Description</p>
+    <p>Price: $ @Model["order"].Price</p>
+    <p>Date Ordered: @Model["order"].Date</p>
+  </div>
+</div>
 
 <p><a href="/vendors/@Model["vendor"].Id">Back to Vendor</a></p>

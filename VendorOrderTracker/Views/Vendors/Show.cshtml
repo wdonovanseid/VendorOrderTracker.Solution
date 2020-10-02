@@ -4,24 +4,34 @@
   Layout = "_Layout";
 }
 
-<h1>@Model["vendor"].Name</h1>
+<div class="card">
+  <div class="card-title">
+    <h1>@Model["vendor"].Name</h1>
+  </div>
+  <div class="card-body">
+    <p>@Model["vendor"].Description</p>
 
-<p>@Model["vendor"].Description</p>
-
-<p>Address: @Model["vendor"].Address</p>
-
-<h4>Orders:</h4>
-<ul>
-  @if (Model["orders"].Count == 0)
-  {
-    <p>There are no Orders at this time</p>
-  }
-  else
-  {
-    @foreach (Order order in Model["orders"])
-    {
-      <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.Title</a></li>
-    }
-  }
-  <p><a href="/vendors/@Model["vendor"].Id/orders/new">Add new Order</a></p>
-</ul>
+    <p>Address: @Model["vendor"].Address</p>
+  </div>
+  <div class="card">
+    <div class="card-title">
+      <h4>Orders:</h4>
+    </div>
+    <div class="card-body">
+      <ul>
+        @if (Model["orders"].Count == 0)
+        {
+          <p>There are no Orders at this time</p>
+        }
+        else
+        {
+          @foreach (Order order in Model["orders"])
+          {
+            <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.Title</a></li>
+          }
+        }
+        <p><a href="/vendors/@Model["vendor"].Id/orders/new">Add new Order</a></p>
+      </ul>
+    </div>
+  </div>
+</div>

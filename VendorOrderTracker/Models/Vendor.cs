@@ -43,5 +43,10 @@ namespace VendorOrderTracker.Models
       Orders.Add(order);
     }
 
+    public static void DeleteVendor(int searchId)
+    {
+      _instances.RemoveAt(searchId-1);
+    }
+
   }
 }

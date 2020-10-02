@@ -35,6 +35,10 @@
           <input id="vendorId" name="vendorId" type="hidden" value="@Model["vendor"].Id">
           <button type="submit">Delete all @Model["vendor"].Name Orders</button>
         </form>
+        <form action="/vendors/@Model["vendor"].Id/delete" method="post">
+          <input id="vendorId" name="vendorId" type="hidden" value="@Model["vendor"].Id">
+          <button type="submit">Delete Vendor</button>
+        </form>
       </ul>
     </div>
   </div>

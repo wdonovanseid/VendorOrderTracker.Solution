@@ -66,5 +66,12 @@ namespace VendorOrderTracker.Controllers
       selectedVendor.Orders.Clear();
       return RedirectToAction("Show");
     }
+
+    [HttpPost("/vendors/{vendorId}/delete")]
+    public ActionResult Destroy2(int vendorId)
+    {
+      Vendor.DeleteVendor(vendorId);
+      return RedirectToAction("Index");
+    }
   }
 }

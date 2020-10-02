@@ -4,7 +4,7 @@ using VendorOrderTracker.Models;
 
 namespace VendorOrderTracker.Controllers
 {
-  public class OrderController : Controller
+  public class OrdersController : Controller
   {
 
     [HttpGet("/vendors/{vendorId}/orders/new")]

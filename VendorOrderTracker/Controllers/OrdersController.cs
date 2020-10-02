@@ -40,7 +40,7 @@ namespace VendorOrderTracker.Controllers
     public ActionResult Patch(int vendorId, int orderId, string inputTitle, string inputDescription, string inputPrice, string inputDate)
     {
       Vendor selectedVendor = Vendor.FindVendor(vendorId);
-      Order selectedOrder = selectedVendor.Orders.FindOrder(orderId);
+      Order selectedOrder = selectedVendor.FindOrderInVendor(orderId);
       selectedOrder.Title = inputTitle;
       selectedOrder.Description = inputDescription;
       selectedOrder.Price = inputPrice;
